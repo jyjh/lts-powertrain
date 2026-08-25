@@ -40,4 +40,10 @@ the package folder, so it works standalone and mounted alike.
 - The EMRAX `.mat` maps live in this repository's `data/powertrain/`;
   they are loaded only through `lts.util.loadMatSafe` (plain-data
   screening).
+- `tests/ConformanceTest.m` pins the `cfg.powertrain` schema
+  (`validateConfig`), the `PowertrainComponent`/`DifferentialComponent`
+  interfaces, and the `PowertrainState` property names feeding the
+  motor/pack telemetry channels. Renaming any of them is a **contract
+  change** — see "Changing the contract" on the
+  [Contracts page](https://jyjh.github.io/lts/contracts/).
 - Details: <https://jyjh.github.io/lts/repo-split/>
